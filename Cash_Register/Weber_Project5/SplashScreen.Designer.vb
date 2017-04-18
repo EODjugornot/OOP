@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class SplashScreen
+Partial Class splashscreen
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -13,10 +13,6 @@ Partial Class SplashScreen
             MyBase.Dispose(disposing)
         End Try
     End Sub
-    Friend WithEvents ApplicationTitle As System.Windows.Forms.Label
-    Friend WithEvents Copyright As System.Windows.Forms.Label
-    Friend WithEvents MainLayoutPanel As System.Windows.Forms.TableLayoutPanel
-    Friend WithEvents DetailsLayoutPanel As System.Windows.Forms.TableLayoutPanel
 
     'Required by the Windows Form Designer
     Private components As System.ComponentModel.IContainer
@@ -26,87 +22,90 @@ Partial Class SplashScreen
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SplashScreen))
-        Me.MainLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
-        Me.DetailsLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(splashscreen))
         Me.Copyright = New System.Windows.Forms.Label()
-        Me.ApplicationTitle = New System.Windows.Forms.Label()
-        Me.MainLayoutPanel.SuspendLayout()
-        Me.DetailsLayoutPanel.SuspendLayout()
+        Me.AppTitle = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.lblProgress = New System.Windows.Forms.Label()
+        Me.barLoading = New System.Windows.Forms.ProgressBar()
         Me.SuspendLayout()
-        '
-        'MainLayoutPanel
-        '
-        Me.MainLayoutPanel.BackgroundImage = CType(resources.GetObject("MainLayoutPanel.BackgroundImage"), System.Drawing.Image)
-        Me.MainLayoutPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.MainLayoutPanel.ColumnCount = 2
-        Me.MainLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 590.0!))
-        Me.MainLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 65.0!))
-        Me.MainLayoutPanel.Controls.Add(Me.DetailsLayoutPanel, 1, 1)
-        Me.MainLayoutPanel.Controls.Add(Me.ApplicationTitle, 1, 0)
-        Me.MainLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MainLayoutPanel.Location = New System.Drawing.Point(0, 0)
-        Me.MainLayoutPanel.Name = "MainLayoutPanel"
-        Me.MainLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 532.0!))
-        Me.MainLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 14.0!))
-        Me.MainLayoutPanel.Size = New System.Drawing.Size(1262, 755)
-        Me.MainLayoutPanel.TabIndex = 0
-        '
-        'DetailsLayoutPanel
-        '
-        Me.DetailsLayoutPanel.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.DetailsLayoutPanel.BackColor = System.Drawing.Color.Transparent
-        Me.DetailsLayoutPanel.ColumnCount = 1
-        Me.DetailsLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 247.0!))
-        Me.DetailsLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 142.0!))
-        Me.DetailsLayoutPanel.Controls.Add(Me.Copyright, 0, 1)
-        Me.DetailsLayoutPanel.Location = New System.Drawing.Point(802, 604)
-        Me.DetailsLayoutPanel.Name = "DetailsLayoutPanel"
-        Me.DetailsLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.12658!))
-        Me.DetailsLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.87342!))
-        Me.DetailsLayoutPanel.Size = New System.Drawing.Size(247, 79)
-        Me.DetailsLayoutPanel.TabIndex = 1
         '
         'Copyright
         '
-        Me.Copyright.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Copyright.AutoSize = True
         Me.Copyright.BackColor = System.Drawing.Color.Transparent
-        Me.Copyright.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Copyright.Location = New System.Drawing.Point(3, 13)
+        Me.Copyright.Font = New System.Drawing.Font("Ubuntu", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Copyright.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Copyright.Location = New System.Drawing.Point(240, 277)
         Me.Copyright.Name = "Copyright"
-        Me.Copyright.Size = New System.Drawing.Size(241, 60)
-        Me.Copyright.TabIndex = 2
-        Me.Copyright.Text = "Copyright"
+        Me.Copyright.Size = New System.Drawing.Size(240, 40)
+        Me.Copyright.TabIndex = 0
+        Me.Copyright.Text = "Copyright Info"
         '
-        'ApplicationTitle
+        'AppTitle
         '
-        Me.ApplicationTitle.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.ApplicationTitle.BackColor = System.Drawing.Color.Transparent
-        Me.ApplicationTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ApplicationTitle.Location = New System.Drawing.Point(802, 160)
-        Me.ApplicationTitle.Name = "ApplicationTitle"
-        Me.ApplicationTitle.Size = New System.Drawing.Size(247, 212)
-        Me.ApplicationTitle.TabIndex = 0
-        Me.ApplicationTitle.Text = "Application Title"
-        Me.ApplicationTitle.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.AppTitle.AutoSize = True
+        Me.AppTitle.BackColor = System.Drawing.Color.Transparent
+        Me.AppTitle.Font = New System.Drawing.Font("Ubuntu", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AppTitle.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.AppTitle.Location = New System.Drawing.Point(239, 225)
+        Me.AppTitle.Name = "AppTitle"
+        Me.AppTitle.Size = New System.Drawing.Size(343, 52)
+        Me.AppTitle.TabIndex = 1
+        Me.AppTitle.Text = "Application Title"
         '
-        'SplashScreen
+        'Timer1
+        '
+        Me.Timer1.Interval = 50
+        '
+        'lblProgress
+        '
+        Me.lblProgress.AutoSize = True
+        Me.lblProgress.BackColor = System.Drawing.Color.Transparent
+        Me.lblProgress.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblProgress.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.lblProgress.Location = New System.Drawing.Point(286, 378)
+        Me.lblProgress.Name = "lblProgress"
+        Me.lblProgress.Size = New System.Drawing.Size(59, 21)
+        Me.lblProgress.TabIndex = 3
+        Me.lblProgress.Text = "Label1"
+        '
+        'barLoading
+        '
+        Me.barLoading.ForeColor = System.Drawing.Color.DarkOrange
+        Me.barLoading.Location = New System.Drawing.Point(12, 345)
+        Me.barLoading.Name = "barLoading"
+        Me.barLoading.Size = New System.Drawing.Size(576, 23)
+        Me.barLoading.Step = 1
+        Me.barLoading.TabIndex = 2
+        '
+        'splashscreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1262, 755)
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.ClientSize = New System.Drawing.Size(600, 400)
         Me.ControlBox = False
-        Me.Controls.Add(Me.MainLayoutPanel)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.MaximizeBox = False
-        Me.MinimizeBox = False
-        Me.Name = "SplashScreen"
-        Me.ShowInTaskbar = False
+        Me.Controls.Add(Me.lblProgress)
+        Me.Controls.Add(Me.barLoading)
+        Me.Controls.Add(Me.AppTitle)
+        Me.Controls.Add(Me.Copyright)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.MaximumSize = New System.Drawing.Size(600, 400)
+        Me.Name = "splashscreen"
+        Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.MainLayoutPanel.ResumeLayout(False)
-        Me.DetailsLayoutPanel.ResumeLayout(False)
+        Me.Text = "splashscreen"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
+    Friend WithEvents Copyright As Label
+    Friend WithEvents AppTitle As Label
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents lblProgress As Label
+    Friend WithEvents barLoading As ProgressBar
 End Class

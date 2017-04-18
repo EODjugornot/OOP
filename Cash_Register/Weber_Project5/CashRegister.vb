@@ -1,7 +1,18 @@
-﻿Public Class frmCashRegister
+﻿''' <summary>
+''' 
+'''     Program Name: Cash Register
+'''         Windows Form for adding items to an order and tallying the order total
+'''     
+'''     Author: Jeff Weber - Mad Bomber Labs
+''' 
+'''     Date: 18 April 2017
+''' 
+''' </summary>
 
-    Dim regMenu, kidsMenu As New Choices()
-    Dim WithEvents cusOrder As New Choices()
+Public Class frmCashRegister
+
+    Dim regularMenu, kidsMenu As New Choices()
+    Dim WithEvents customerOrder As New Choices()
     Dim total As Double
 
     ' Form onLoad
@@ -11,11 +22,11 @@
         Me.CenterToScreen()
 
         ' Regualar menu items added to regMenu
-        regMenu.Add(New Food("Pizza Slice", 1.75))
-        regMenu.Add(New Food("Burger", 2.55))
-        regMenu.Add(New Food("Salad", 3.29))
-        regMenu.Add(New Food("Large Soda", 1.25))
-        regMenu.Add(New Food("Medium Soda", 0.9))
+        regularMenu.Add(New Food("Pizza Slice", 1.75))
+        regularMenu.Add(New Food("Burger", 2.55))
+        regularMenu.Add(New Food("Salad", 3.29))
+        regularMenu.Add(New Food("Large Soda", 1.25))
+        regularMenu.Add(New Food("Medium Soda", 0.9))
 
         ' kids menu items added to kidsMenu
         kidsMenu.Add(New Food("Hot Dog", 1.5))
@@ -23,13 +34,13 @@
         kidsMenu.Add(New Food("Cookie", 0.96))
 
         ' Display regular items
-        For i = 0 To regMenu.Size - 1
-            lstRegularMenu.Items.Add(regMenu.getItem(i).Name & "(" & FormatCurrency(regMenu.getItem(i).Price, 2) + ")")
+        For i = 0 To regularMenu.Size - 1
+            lstRegularMenu.Items.Add(regularMenu.getItem(i).Name & "(" & FormatCurrency(regularMenu.getItem(i).Price, 2) + ")")
         Next
 
         ' Display kidsmenu items
         For i = 0 To kidsMenu.Size - 1
-            lstKidsMenu.Items.Add(kidsMenu.getItem(i).Name & "(" & FormatCurrency(regMenu.getItem(i).Price, 2) + ")")
+            lstKidsMenu.Items.Add(kidsMenu.getItem(i).Name & "(" & FormatCurrency(regularMenu.getItem(i).Price, 2) + ")")
         Next
 
     End Sub
@@ -40,8 +51,8 @@
 
             Dim index As Integer = lstRegularMenu.SelectedIndex
 
-            cusOrder.Add(regMenu.getItem(index))
-            lstCustomerOrder.Items.Add(regMenu.getItem(index).Name & " (" & FormatCurrency(regMenu.getItem(index).Price, 2) + ")")
+            customerOrder.Add(regularMenu.getItem(index))
+            lstCustomerOrder.Items.Add(regularMenu.getItem(index).Name & " (" & FormatCurrency(regularMenu.getItem(index).Price, 2) + ")")
 
         Else
             MessageBox.Show("Please select an item", "Warning")
@@ -55,7 +66,7 @@
 
             Dim index As Integer = lstKidsMenu.SelectedIndex
 
-            cusOrder.Add(kidsMenu.getItem(index))
+            customerOrder.Add(kidsMenu.getItem(index))
             lstCustomerOrder.Items.Add(kidsMenu.getItem(index).Name & " (" & FormatCurrency(kidsMenu.getItem(index).Price, 2) + ")")
 
         Else
@@ -65,7 +76,7 @@
     End Sub
 
     ' Procedure for ChoiceChanged Event of cusOrder
-    Private Sub cusOrder_ChoiceChanged(ByVal name As String, ByVal price As Double) Handles cusOrder.ChoiceChanged
+    Private Sub cusOrder_ChoiceChanged(ByVal name As String, ByVal price As Double) Handles customerOrder.ChoiceChanged
 
         total += price
 
