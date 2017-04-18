@@ -8,10 +8,10 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("Weber_Project5")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("Weber_Project5")>
+<Assembly: AssemblyTitle("Cash Register")>
+<Assembly: AssemblyDescription("Allow a user to place orders at a fast food restaurant")>
+<Assembly: AssemblyCompany("Mad Bomber Labs")>
+<Assembly: AssemblyProduct("Weber_Project5_OOP_CashRegister")>
 <Assembly: AssemblyCopyright("Copyright ©  2017")>
 <Assembly: AssemblyTrademark("")>
 
