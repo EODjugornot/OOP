@@ -54,6 +54,7 @@ Partial Class frmCashRegister
         '
         'lstRegularMenu
         '
+        Me.lstRegularMenu.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstRegularMenu.FormattingEnabled = True
         Me.lstRegularMenu.ItemHeight = 20
         Me.lstRegularMenu.Location = New System.Drawing.Point(7, 26)
@@ -94,6 +95,7 @@ Partial Class frmCashRegister
         '
         'lstCustomerOrder
         '
+        Me.lstCustomerOrder.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstCustomerOrder.FormattingEnabled = True
         Me.lstCustomerOrder.ItemHeight = 20
         Me.lstCustomerOrder.Location = New System.Drawing.Point(7, 26)
@@ -114,6 +116,7 @@ Partial Class frmCashRegister
         '
         'lstKidsMenu
         '
+        Me.lstKidsMenu.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstKidsMenu.FormattingEnabled = True
         Me.lstKidsMenu.ItemHeight = 20
         Me.lstKidsMenu.Location = New System.Drawing.Point(7, 26)

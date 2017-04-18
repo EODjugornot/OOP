@@ -7,17 +7,20 @@
     ' Form onLoad
     Private Sub frmCashRegister_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        ' Center on screen
+        Me.CenterToScreen()
+
         ' Regualar menu items added to regMenu
-        regMenu.Add(New Food("pizza slice", 1.75))
-        regMenu.Add(New Food("burger", 2.55))
-        regMenu.Add(New Food("salad", 3.29))
-        regMenu.Add(New Food("large soda", 1.25))
-        regMenu.Add(New Food("medium soda", 0.9))
+        regMenu.Add(New Food("Pizza Slice", 1.75))
+        regMenu.Add(New Food("Burger", 2.55))
+        regMenu.Add(New Food("Salad", 3.29))
+        regMenu.Add(New Food("Large Soda", 1.25))
+        regMenu.Add(New Food("Medium Soda", 0.9))
 
         ' kids menu items added to kidsMenu
-        kidsMenu.Add(New Food("hot dog", 1.5))
-        kidsMenu.Add(New Food("small soda", 0.6))
-        kidsMenu.Add(New Food("cookie", 0.96))
+        kidsMenu.Add(New Food("Hot Dog", 1.5))
+        kidsMenu.Add(New Food("Small Soda", 0.6))
+        kidsMenu.Add(New Food("Cookie", 0.96))
 
         ' Display regular items
         For i = 0 To regMenu.Size - 1

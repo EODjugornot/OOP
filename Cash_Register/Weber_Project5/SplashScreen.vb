@@ -10,6 +10,9 @@
         'TODO: Customize the application's assembly information in the "Application" pane of the project 
         '  properties dialog (under the "Project" menu).
 
+        ' Center on screen
+        Me.CenterToScreen()
+
         'Application title
         If My.Application.Info.Title <> "" Then
             ApplicationTitle.Text = My.Application.Info.Title
